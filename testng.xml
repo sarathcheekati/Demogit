@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomatingPractoApplicaton" >
+
+<listeners>
+<listener class-name="com.qa.utilities.ReportingClass">
+
+</listener></listeners>
+
+
+ <parameter name="URL" value="https://www.practo.com"/>
+  <test  name="TestPracto-chrome" parallel="classes" thread-count="6">
+ 
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.testscripts.TC_PractoLogin"/>
+      <class name="com.qa.testscripts.TC_myAppoints"/>
+      <class name="com.qa.testscripts.TC_SendInstallationLink"/>
+      <class name="com.qa.testscripts.TC_UpdateUserDetails"/>
+      <class name="com.qa.testscripts.TC_UpdatingPassword"/>
+      <class name="Testing_Team_7.PractoMedicalApplicationAutomation.AppTest"/>
+      </classes>
+  </test> 
+  
+  
+</suite> 
